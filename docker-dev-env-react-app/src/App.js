@@ -1,9 +1,14 @@
 import * as React from "react";
-import "@cloudscape-design/global-styles/index.css";
-import Button from "@cloudscape-design/components/button";
-import TextContent from "@cloudscape-design/components/text-content";
-import SpaceBetween from "@cloudscape-design/components/space-between";
-import Textarea from "@cloudscape-design/components/textarea";
+import "./styles/base.scss";
+
+import {
+  Box,
+  Button,
+  SpaceBetween,
+  Container,
+  Textarea,
+} from "@cloudscape-design/components";
+
 import {
   applyMode,
   applyDensity,
@@ -18,23 +23,24 @@ const App = () => {
   const [value, setValue] = React.useState("");
 
   return (
-    <div>
+    <Container>
       <SpaceBetween direction="vertical" size="m">
-        <Button>Secondary button</Button>
         <Button variant="primary">Primary button</Button>
       </SpaceBetween>
-      <Textarea
-        onChange={({ detail }) => {
-          return setValue(detail.value);
-        }}
-        value={value}
-        autoFocus
-        placeholder="Enter content here"
-      />
-      <TextContent>
-        <strong>{value}</strong>
-      </TextContent>
-    </div>
+      <Box padding={{ vertical: "m" }}>
+        <Textarea
+          onChange={({ detail }) => {
+            return setValue(detail.value);
+          }}
+          value={value}
+          autoFocus
+          placeholder="Enter content here"
+        />
+        <Box variant="p">
+          <strong>{value}</strong>
+        </Box>
+      </Box>
+    </Container>
   );
 };
 
