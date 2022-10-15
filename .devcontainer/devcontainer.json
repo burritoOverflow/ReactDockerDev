@@ -6,7 +6,6 @@
     "shutdownAction": "stopCompose",
     "postCreateCommand": "source ~/.windows.sh",
     "workspaceFolder": "/workspace",
-    // "overrideCommand": "",
     "extensions": [
         "dbaeumer.vscode-eslint", // ESLint
         "esbenp.prettier-vscode", // Prettier code formatter
@@ -26,10 +25,9 @@
         "stkb.rewrap", // rewrap comments after n characters on one line
         "vscode-icons-team.vscode-icons", // Better file extension icons
         "github.vscode-pull-request-github", // Github interaction
-        "quicktype.quicktype" // Paste JSON as code
-        // "JakeWilson.vscode-cdnjs", // Search and embed libraries from cdnjs.com
-        // "alefragnani.Bookmarks",
-        // "spikespaz.vscode-smoothtype", // smooth cursor animation
+        "quicktype.quicktype", // Paste JSON as code
+        "spikespaz.vscode-smoothtype", // smooth cursor animation
+        "dsznajder.es7-react-js-snippets" // autocomplete React snippets
     ],
     "settings": {
         "files.eol": "\n",
@@ -49,19 +47,19 @@
         "editor.formatOnSave": true,
         "[javascript]": {
             "editor.defaultFormatter": "esbenp.prettier-vscode",
-            "editor.formatOnSave": false
+            "editor.formatOnSave": true
           },
           "[javascriptreact]": {
               "editor.defaultFormatter": "esbenp.prettier-vscode",
-              "editor.formatOnSave": false
+              "editor.formatOnSave": true
           },
           "[typescript]": {
               "editor.defaultFormatter": "esbenp.prettier-vscode",
-              "editor.formatOnSave": false
+              "editor.formatOnSave": true
           },
           "[typescriptreact]": {
               "editor.defaultFormatter": "esbenp.prettier-vscode",
-              "editor.formatOnSave": false
+              "editor.formatOnSave": true
           },
           "prettier-eslint.eslintIntegration": true
     }
